@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -Pprod -DskipTests
 #======================================================
 FROM openjdk:17-jdk-slim
-COPY --from=build /target/parcial-0.0.1-SNAPSHOT.jar parcial.jar
+COPY --from=build /target/Parcial-0.0.1-SNAPSHOT.jar Parcial.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","parcial.jar"]
